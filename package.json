@@ -9,6 +9,7 @@
     "test": "node ./node_modules/.bin/jest"
   },
   "dependencies": {
+    "@prisma/client": "^3.14.0",
     "core-js": "^3.8.3",
     "express": "^4.18.1",
     "vue": "^2.6.14",
@@ -23,6 +24,7 @@
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "jest": "^26.0.0",
+    "prisma": "^3.14.0",
     "sass": "~1.32.0",
     "sass-loader": "^10.0.0",
     "vue-cli-plugin-vuetify": "~2.4.8",
