@@ -25,7 +25,10 @@ describe('Unit test for Event Service', () => {
         const events = await EventService.updateEvent(8,"actualizacion de act");
         expect(events.activity).toBe("actualizacion de act");
     });
-    
 
+    test('Should return id of deleted event', async () => {
+        const events = await EventService.deleteEvent(5);
+        expect(events.id).toBe(5);
+    });  
 
 });
