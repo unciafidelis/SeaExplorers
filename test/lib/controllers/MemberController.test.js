@@ -1,4 +1,4 @@
-const MemberController = require('../../../lib/controller/MemberController')
+const MemberController = require('../../../lib/controllers/MemberController')
 
 describe('Unit test for Member Controller', () => {
     test('Should return a bigger value of Member List Length', async () => {
@@ -27,7 +27,7 @@ describe('Unit test for Member Controller', () => {
     })
     test('Should delete a especific member', async () => {
         await MemberService.deleteMember(11)
-        const member = await Membercontroller.getMember(11)
+        const member = await MemberController.getMember(11)
         expect(member).toBe(null)
     })
 })
