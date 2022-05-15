@@ -25,4 +25,9 @@ describe('Unit test for Member Controller', () => {
         const updatedOrganizer = await OrganizerController.updateOrganizer(id, username)
         expect(updatedOrganizer.username).toBe("userNameTestController")
     })
+    test('Should delete a especific organizer', async () => {
+        await MemberService.deleteOrganizer(11)
+        const organizer = await Membercontroller.getOrganizer(11)
+        expect(organizer).toBe(null)
+    })
 })
