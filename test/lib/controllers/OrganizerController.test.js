@@ -5,5 +5,8 @@ describe('Unit test for Member Controller', () => {
         const allOrganizers = await OrganizerController.getAllOrganizers()
         expect(allOrganizers.length > 0).toBe(true)
     })
-    
+    test('Should return a name of the specific Organizer', async () => {
+        const organizer = await OrganizerController.getOrganizer(1)
+        expect(organizer.name).toBe("Juanito Perez")
+    })
 })
