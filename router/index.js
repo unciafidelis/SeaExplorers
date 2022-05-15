@@ -11,9 +11,19 @@ const routes = [
     component: LandingPage
   },
   {
-    path: '/member',
+    path: '/',
     name: 'member',
     component: () => import('../src/components/member/MemberComponent.vue')
+  },
+  {
+    path: '/event',
+    name: 'event',
+    component: () => import('../src/components/event/EventComponent.vue')
+  },
+  {
+    path: '/blog',
+    name: 'blog',
+    component: () => import('../src/components/blog/BlogComponent.vue')
   }
 ]
 
