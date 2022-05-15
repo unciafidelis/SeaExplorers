@@ -1,36 +1,20 @@
 import { createWebHistory, createRouter } from "vue-router";
 const routes =  [
   {
+    path: "/signin",
+    name: "registryMember",
+    component: () => import("./components/RegistryMemberComponent")
+  },
+  {
+    path: "/member/:id",
+    name: "memberDetails",
+    component: () => import("./components/MemberComponent")
+  },
+  {
     path: "/",
-    alias: "/explorers",
-    name: "explorers",
-    component: () => import("./components/ExplorersList")
+    name: "landingPage",
+    component: () => import("./components/LandingPage")
   },
-  {
-    path: "/explorer/:id",
-    name: "explorer-details",
-    component: () => import("./components/Explorer")
-  },
-  {
-    path: "/add",
-    name: "add-explorer",
-    component: () => import("./components/AddExplorer")
-  },
-  {
-    path: "/mcx",
-    name: "missionCommanderX",
-    component: () => import("./components/MissionCommanderList")
-  },
-  {
-    path: "/addmcx",
-    name: "add-missionCommanderX",
-    component: () => import("./components/AddMissionCommander")
-  },
-  {
-    path: "/mcx/:id",
-    name: "missioncommander-details",
-    component: () => import("./components/MissionCommander")
-  }
 
   
 ];

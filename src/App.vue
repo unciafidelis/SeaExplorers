@@ -1,14 +1,16 @@
 <template>
-  <div id="app"> 
-        <NavBar/>
-        <LandingPage/>
-  </div>
+  
+  <v-app>
+    <v-main>
+      <router-view></router-view>
+    </v-main>
+  </v-app>
+
 </template>
+
 <script>
-import NavBar from "./components/NavBar.vue";
-import LandingPage from "./components/LandingPage.vue";
+import Nav from "./components/Nav";
 export default {
-    name: "app",
-    components: { NavBar, LandingPage }
-};
+  data:() => ({})
+}
 </script>
