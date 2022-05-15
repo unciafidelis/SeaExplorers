@@ -19,4 +19,10 @@ describe('Unit test for Member Controller', () => {
         const newMember = await MemberController.newMember(data)
         expect(newMember.name).toBe("Test")
     })
+    test('Should update members username', async () => {
+        const id = 1
+        const username = "userNameTestController"
+        const updatedMember = await MemberController.updateMember(id, username)
+        expect(updatedMember.username).toBe("userNameTestController")
+    })
 })
