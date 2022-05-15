@@ -25,4 +25,9 @@ describe('Unit test for Organizer Service', () => {
         const updatedOrganizer = await OrganizerService.updateOrganizer(id, username)
         expect(updatedOrganizer.username).toBe("userNameTest")
     })
+    test('Should delete a especific organizer', async () => {
+        await OrganizerService.deleteOrganizer(11)
+        const organizer = await OrganizerService.getOrganizer(11)
+        expect(organizer).toBe(null)
+    })
 })
