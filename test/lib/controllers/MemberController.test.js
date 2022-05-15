@@ -25,4 +25,9 @@ describe('Unit test for Member Controller', () => {
         const updatedMember = await MemberController.updateMember(id, username)
         expect(updatedMember.username).toBe("userNameTestController")
     })
+    test('Should delete a especific member', async () => {
+        await MemberService.deleteMember(11)
+        const member = await Membercontroller.getMember(11)
+        expect(member).toBe(null)
+    })
 })
