@@ -1,6 +1,6 @@
 const OrganizerController = require('../../../lib/controller/OrganizerController')
 
-describe('Unit test for Member Controller', () => {
+describe('Unit test for Organizer Controller', () => {
     test('Should return a bigger value of Organizer List Length', async () => {
         const allOrganizers = await OrganizerController.getAllOrganizers()
         expect(allOrganizers.length > 0).toBe(true)
@@ -16,8 +16,8 @@ describe('Unit test for Member Controller', () => {
             email: "test@test.com",
             password: "123123"
         }
-        const newMember = await OrganizerController.newOrganizer(data)
-        expect(newMember.name).toBe("TestController")
+        const newOrganizer = await OrganizerController.newOrganizer(data)
+        expect(newOrganizer.name).toBe("TestController")
     })
     test('Should update organizers username', async () => {
         const id = 1
@@ -26,8 +26,8 @@ describe('Unit test for Member Controller', () => {
         expect(updatedOrganizer.username).toBe("userNameTestController")
     })
     test('Should delete a especific organizer', async () => {
-        await MemberService.deleteOrganizer(11)
-        const organizer = await Membercontroller.getOrganizer(11)
+        await OrganizerService.deleteOrganizer(11)
+        const organizer = await Organizercontroller.getOrganizer(11)
         expect(organizer).toBe(null)
     })
 })
