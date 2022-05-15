@@ -23,4 +23,8 @@ describe('Unit test for Event Controller', () => {
         const events = await EventController.updateEvent(2,"Conozcamos a las vaquitas marinas en su habitat natural y limpiemos su casa");
         expect(events.activity).toBe("Conozcamos a las vaquitas marinas en su habitat natural y limpiemos su casa");
     });
+    test('Should return id of deleted event', async () => {
+        const events = await EventController.deleteEvent(5);
+        expect(events.id).toBe(5);
+    });
 });
