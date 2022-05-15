@@ -1,4 +1,4 @@
-const OrganizerController = require('../../../lib/controller/OrganizerController')
+const OrganizerController = require('../../../lib/controllers/OrganizerController')
 
 describe('Unit test for Organizer Controller', () => {
     test('Should return a bigger value of Organizer List Length', async () => {
