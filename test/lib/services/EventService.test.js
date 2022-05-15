@@ -12,18 +12,18 @@ describe('Unit test for Event Service', () => {
 
     test('Should return name of added event', async () => {
         const events = await EventService.newEvent(
-        {"name": "Un test service",
-        "activity": "test act",
-        "location": "test location",
-        "type": "playero",
-        "personQuota": 10,
+        {"name": "Salvemos la vaquita marina",
+        "activity": "Veamos a las vaquitas marinas en su habitat natural y limpiemos su casa",
+        "location": "Ensenada, Baja California",
+        "type": "Evento de buceo",
+        "personQuota": 15,
         "organizer": "Juanito Perez"});
-        expect(events.name).toBe("Un test service");
+        expect(events.name).toBe("Salvemos la vaquita marina");
     });
     
     test('Should return updated activity', async () => {
-        const events = await EventService.updateEvent(8,"actualizacion de act");
-        expect(events.activity).toBe("actualizacion de act");
+        const events = await EventService.updateEvent(2,"Conozcamos a las vaquitas marinas en su habitat natural y limpiemos su casa");
+        expect(events.activity).toBe("Conozcamos a las vaquitas marinas en su habitat natural y limpiemos su casa");
     });
 
     test('Should return id of deleted event', async () => {
