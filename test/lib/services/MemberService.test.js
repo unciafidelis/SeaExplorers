@@ -24,5 +24,10 @@ describe('Unit test for Member Service', () => {
         const username = "userNameTest"
         const updatedMember = await MemberService.updateMember(id, username)
         expect(updatedMember.username).toBe("userNameTest")
-
+    })
+    test('Should delete a especific member', async () => {
+        await MemberService.deleteMember(11)
+        const member = await MemberService.getMember(11)
+        expect(member).toBe(null)
+    })
 })
