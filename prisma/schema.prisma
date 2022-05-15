@@ -17,3 +17,21 @@ model Member {
   email String @db.VarChar(255)
   password String @db.VarChar(255)
 }
+
+model Event {
+  id Int @id @default(autoincrement())
+  name String @db.VarChar(255)
+  activity String @db.VarChar(255)
+  location String @db.VarChar(255)
+  type String @db.VarChar(255)
+  personQuota Int
+  organizer String @db.VarChar(255)
+}
+
+model Organizer {
+  id Int @id @default(autoincrement())
+  name String @db.VarChar(255)
+  username String @db.VarChar(255)
+  email String @db.VarChar(255)
+  password String @db.VarChar(255)
+}
