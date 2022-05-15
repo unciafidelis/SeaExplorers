@@ -11,10 +11,19 @@
     <router-link style="text-decoration: none; color: inherit;" to="/member"><v-btn text style="margin-top: 8%;">Miembros</v-btn></router-link>
     <router-link style="text-decoration: none; color: inherit;" to="/blog"><v-btn text style="margin-top: 12%;">Blog</v-btn></router-link>
     <router-link style="text-decoration: none; color: inherit;" to="/donate"><v-btn text style="background:#006ff9; margin-top: 10%;" class="primary">Donar</v-btn></router-link>
-    <router-link style="text-decoration: none; color: inherit;" to="/blog"><v-app-bar-nav-icon></v-app-bar-nav-icon></router-link>
+    <router-link style="text-decoration: none; color: inherit;" to="/registry"><v-app-bar-nav-icon></v-app-bar-nav-icon></router-link>
   </v-toolbar-items>
 </v-toolbar>
     </nav>
-    <router-view/>
+  <section>
+    <div>
+      <router-view/>
+    </div>
+   
+    </section>
+
+
+  
+
   </div>
 </template>
