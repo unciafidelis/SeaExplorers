@@ -1,12 +1,14 @@
 <template>
   <div id="app"> 
-        <HelloWorld/>
+        <NavBar/>
+        <LandingPage/>
   </div>
 </template>
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import NavBar from "./components/NavBar.vue";
+import LandingPage from "./components/LandingPage.vue";
 export default {
     name: "app",
-    components: { HelloWorld }
+    components: { NavBar, LandingPage }
 };
 </script>
