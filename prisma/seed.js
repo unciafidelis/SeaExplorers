@@ -53,9 +53,36 @@ const prisma = new PrismaClient();
                 password: "funcionandoBienSuave!",
             },
         });     
- 
-
+           
         console.log("Create members/members/member");
+
+        const event1 = await prisma.Event.upsert({
+            where: { id: 1 },
+            update: {},
+            create: {
+                name: "Ataque Pirata",
+                activity: "Vayamos en busqueda del tesoro y ayudemos a limpiar los mares de nuestro bello país",
+                location: "Guaymas, Sonora",
+                type: "Evento de playa",
+                personQuota: 100,
+                organizer: "Juanito Perez"
+            },
+        });   
+ 
+        console.log("Create events/events/event");
+           
+        const Organizer1 = await prisma.Organizer.upsert({
+            where: { id: 1 },
+            update: {},
+            create: {
+                name: "Juanito Perez",
+                username: "JuanitoP",
+                email: "juanitoperez@gmail.com",
+                password: "soyElOrganizadorNumeroUno!",
+            },
+        });   
+
+        console.log("Create organizers/organizers/organizer");
     } catch(e) {
         console.error(e);
         process.exit(1);
