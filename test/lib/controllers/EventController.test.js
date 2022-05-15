@@ -19,4 +19,8 @@ describe('Unit test for Event Controller', () => {
         "organizer": "Juanito Perez"});
         expect(events.name).toBe("Salvemos la vaquita marina");
     });
+    test('Should return updated activity', async () => {
+        const events = await EventController.updateEvent(2,"Conozcamos a las vaquitas marinas en su habitat natural y limpiemos su casa");
+        expect(events.activity).toBe("Conozcamos a las vaquitas marinas en su habitat natural y limpiemos su casa");
+    });
 });
