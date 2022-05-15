@@ -7,7 +7,7 @@ describe('Unit test for Organizer Service', () => {
     })
     test('Should return a name of the specific Organizer', async () => {
         const organizer = await OrganizerService.getOrganizer(1)
-        expect(organizer.name).toBe("dalex")
+        expect(organizer.name).toBe("Juanito Perez")
     })
     test('Should insert a new organizer', async () => {
         const data = {
