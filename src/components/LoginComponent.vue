@@ -10,60 +10,32 @@
       <v-card ref="form">
         <v-card-text>
           <v-text-field
-            ref="name"
-            v-model="name"
-            :rules="[() => !!name || 'This field is required']"
+            ref="UsernameLogin"
+            v-model="UsernameLogin"
+            :rules="[() => !!UsernameLogin || 'No deje vacío el campo']"
             :error-messages="errorMessages"
-            label="Full Name"
-            placeholder="John Doe"
+            label="Usuario"
+            placeholder="Escriba su usuario"
             required
-          ></v-text-field>
+          ></v-text-field>        
+
+
           <v-text-field
-            ref="address"
-            v-model="address"
-            :rules="[
-              () => !!address || 'This field is required',
-              () => !!address && address.length <= 25 || 'Address must be less than 25 characters',
-              addressCheck
-            ]"
-            label="Address Line"
-            placeholder="Snowy Rock Pl"
-            counter="25"
+            ref="passwordLogin"
+            v-model="passwordLogin"
+            :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+            :rules="[rules.required, rules.min, () => !!passwordLogin || 'No deje vacío el campo']"
+            :error-messages="errorMessages"
+            :type="show1 ? 'text' : 'password'"
+            name="passwordLogin"
+            label="Contraseña"
+            placeholder="Escriba la contraseña"
+            hint="At least 8 characters"
+            counter
             required
+            @click:append="show1 = !show1"
           ></v-text-field>
-          <v-text-field
-            ref="city"
-            v-model="city"
-            :rules="[() => !!city || 'This field is required', addressCheck]"
-            label="City"
-            placeholder="El Paso"
-            required
-          ></v-text-field>
-          <v-text-field
-            ref="state"
-            v-model="state"
-            :rules="[() => !!state || 'This field is required']"
-            label="State/Province/Region"
-            required
-            placeholder="TX"
-          ></v-text-field>
-          <v-text-field
-            ref="zip"
-            v-model="zip"
-            :rules="[() => !!zip || 'This field is required']"
-            label="ZIP / Postal Code"
-            required
-            placeholder="79938"
-          ></v-text-field>
-          <v-autocomplete
-            ref="country"
-            v-model="country"
-            :rules="[() => !!country || 'This field is required']"
-            :items="countries"
-            label="Country"
-            placeholder="Select..."
-            required
-          ></v-autocomplete>
+
         </v-card-text>
         <v-divider class="mt-12"></v-divider>
         <v-card-actions>
@@ -103,6 +75,8 @@
   </v-row>
 </div>
 </template>
+
+
 <script>
   export default {
     data: () => ({
@@ -115,7 +89,20 @@
       zip: null,
       country: null,
       formHasErrors: false,
-    }),
+    },
+    {
+        show1: false,
+        show2: true,
+        show3: false,
+        show4: false,
+        password: 'passwordLogin',
+        rules: {
+          required: value => !!value || 'Required.',
+          min: v => v.length >= 8 || 'Min 8 characters',
+          emailMatch: () => (`The email and password you entered don't match`),
+        },
+      }
+    ),
 
     computed: {
       form () {
@@ -162,5 +149,6 @@
         })
       },
     },
+
   }
 </script>
