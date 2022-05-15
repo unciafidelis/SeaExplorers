@@ -9,4 +9,14 @@ describe('Unit test for Member Service', () => {
         const member = await MemberService.getMember(1)
         expect(member.name).toBe("DianaMagallanes")
     })
+    test('Should insert a new member', async () => {
+        const data = {
+            name: "Test",
+            username: "test",
+            email: "test@test.com",
+            password: "123123"
+        }
+        const newMember = await MemberService.newMember(data)
+        expect(newMember.name).toBe("Test")
+    })
 })
