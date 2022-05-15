@@ -19,4 +19,10 @@ describe('Unit test for Organizer Service', () => {
         const newOrganizer = await OrganizerService.newOrganizer(data)
         expect(newOrganizer.name).toBe("TestOrganizer")
     })
+    test('Should update organizers username', async () => {
+        const id = 1
+        const username = "userNameTest"
+        const updatedOrganizer = await OrganizerService.updateOrganizer(id, username)
+        expect(updatedOrganizer.username).toBe("userNameTest")
+    })
 })
