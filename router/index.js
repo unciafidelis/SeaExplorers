@@ -11,7 +11,7 @@ const routes = [
     component: LandingPage
   },
   {
-    path: '/',
+    path: '/member',
     name: 'member',
     component: () => import('../src/components/member/MemberComponent.vue')
   },
@@ -24,6 +24,11 @@ const routes = [
     path: '/blog',
     name: 'blog',
     component: () => import('../src/components/blog/BlogComponent.vue')
+  },
+  {
+    path: '/registry',
+    name: 'blog',
+    component: () => import('../src/components/member/RegistryMemberComponent.vue')
   }
 ]
 

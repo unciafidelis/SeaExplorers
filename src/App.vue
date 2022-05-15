@@ -17,7 +17,7 @@
     </nav>
   <section>
     <div>
-      <router-view/>
+      <router-view/> 
     </div>
    
     </section>
