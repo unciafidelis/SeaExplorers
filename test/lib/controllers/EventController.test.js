@@ -9,4 +9,14 @@ describe('Unit test for Event Controller', () => {
         const events = await EventController.getEvent(1);
         expect(events.name).toBe("Ataque Pirata");
     });
+    test('Should return name of added event', async () => {
+        const events = await EventController.newEvent(
+        {"name": "Salvemos la vaquita marina",
+        "activity": "Veamos a las vaquitas marinas en su habitat natural y limpiemos su casa",
+        "location": "Ensenada, Baja California",
+        "type": "Evento de buceo",
+        "personQuota": 15,
+        "organizer": "Juanito Perez"});
+        expect(events.name).toBe("Salvemos la vaquita marina");
+    });
 });
