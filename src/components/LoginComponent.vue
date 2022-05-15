@@ -8,6 +8,9 @@
       lg="6"
     >
       <v-card ref="form">
+        <v-card-title>
+          Inicio de sesión
+        </v-card-title>
         <v-card-text>
           <v-text-field
             ref="username"

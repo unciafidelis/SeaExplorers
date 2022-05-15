@@ -8,6 +8,9 @@
       lg="6"
     >
       <v-card ref="form">
+        <v-card-title>
+          Registrar el organizador
+        </v-card-title>
         <v-card-text>
           <v-text-field
             ref="name"
