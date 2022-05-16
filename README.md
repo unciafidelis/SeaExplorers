@@ -46,3 +46,7 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
+
+### Cambio de visibilidad
+
+El proyecto principar se verá afectado al cambiar la visibilidad a público

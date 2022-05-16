@@ -11,8 +11,8 @@ const routes = [
     component: LandingPage
   },
   {
-    path: '/member',
-    name: 'member',
+    path: '/members',
+    name: 'member-list',
     component: () => import('../src/components/member/MemberComponent.vue')
   },
   {
