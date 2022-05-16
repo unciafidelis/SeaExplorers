@@ -57,6 +57,9 @@ npm run build
 ```
 npm run lint
 ```
+### More documentation about how to run this repo
+[Readme](https://github.com/DianaMagallanes/SeaExplorers-1/blob/DianaDev/Documentaci%C3%B3n%20Proyecto.pdf)
+
 ## Used Technologies
 <img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/nodejs/nodejs-original.svg" width="36" height="36" alt="NodeJS" /> <img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/vuejs/vuejs-original.svg" width="36" height="36" alt="Vue" /> <img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/vuetify/vuetify-original.svg" width="36" height="36" alt="Vuetify" /> <img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/postgresql/postgresql-original.svg" width="36" height="36" alt="Postgresql" /> <img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/azure/azure-original.svg" width="36" height="36" alt="Azure" /> <img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/jest/jest-plain.svg" width="36" height="36" alt="Jest" /> <img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/sass/sass-original.svg" width="36" height="36" alt="SASS" /> <img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/eslint/eslint-original.svg" width="36" height="36" alt="ESLint" /> <img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/express/express-original.svg" width="36" height="36" alt="Express" />
 
