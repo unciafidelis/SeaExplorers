@@ -7,7 +7,7 @@
           :class="{ active: index == currentIndex }"
           v-for="(event, index) in events"
           :key="index"
-          @click="setActiveExplorer(event, index)"
+          @click="setActiveEvent(event, index)"
         >
           {{ event.name }}
         </li>
@@ -15,19 +15,19 @@
       </ul>
     </div>
     <div class="col-md-6">
-      <div v-if="currentExplorer">
+      <div v-if="currentEvent">
         <h4>Eventos</h4>
         <div>
-          <br><label><strong>Nombre:</strong></label> {{ currentExplorer.name}}
-          <br><label><strong>Actividad:</strong></label> {{ currentExplorer.activity}}
-          <br><label><strong>Locazión:</strong></label> {{ currentExplorer.location}}
-          <br><label><strong>Tipo:</strong></label> {{ currentExplorer.type}}
-          <br><label><strong>Cupo de persona:</strong></label> {{ currentExplorer.personQuota}}
-          <br><label><strong>Organizador:</strong></label> {{ currentExplorer.organizer}}
-          <br><label><strong>Solo miembros:</strong></label> {{ currentExplorer.onlyMembers}}
+          <br><label><strong>Nombre:</strong></label> {{ currentEvent.name}}
+          <br><label><strong>Actividad:</strong></label> {{ currentEvent.activity}}
+          <br><label><strong>Locazión:</strong></label> {{ currentEvent.location}}
+          <br><label><strong>Tipo:</strong></label> {{ currentEvent.type}}
+          <br><label><strong>Cupo de persona:</strong></label> {{ currentEvent.personQuota}}
+          <br><label><strong>Organizador:</strong></label> {{ currentEvent.organizer}}
+          <br><label><strong>Solo miembros:</strong></label> {{ currentEvent.onlyMembers}}
 
         </div>
-        <router-link :to="'/event/' + currentExplorer.id" class="btn btn-info"> Editar</router-link>
+        <router-link :to="'/event/' + currentEvent.id" class="btn btn-info"> Editar</router-link>
       </div>
       <div v-else>
         <br />
@@ -45,10 +45,10 @@ export default {
       tutorials: [],
       events: [],
       currentTutorial: null,
-      currentExplorer: null,
+      currentEvent: null,
       currentIndex: -1,
       title: "",
-      explorerId: ""
+      eventId: ""
     };
   },
   methods: {
@@ -61,8 +61,8 @@ export default {
           console.log(e);
         });
     },
-    setActiveExplorer(event, index) {
-      this.currentExplorer= event;
+    setActiveEvent(event, index) {
+      this.currentEvent= event;
       this.currentIndex = event? index : -1;
     }
   },
