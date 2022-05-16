@@ -9,7 +9,7 @@ class MemberService {
     return http.get(`/explorers/${id}`);
   }
   create(data) {
-    return http.post("/explorers", data);
+    return http.post("/members", data);
   }
   update(id, data) {
     return http.put(`/explorers/${id}`, data);

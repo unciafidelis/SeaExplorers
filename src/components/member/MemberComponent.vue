@@ -7,7 +7,7 @@
           :class="{ active: index == currentIndex }"
           v-for="(member, index) in members"
           :key="index"
-          @click="setActiveExplorer(member, index)"
+          @click="setActiveMember(member, index)"
         >
           {{ member.username }}
         </li>
@@ -15,14 +15,14 @@
       </ul>
     </div>
     <div class="col-md-6">
-      <div v-if="currentExplorer">
-        <h4>Explorer</h4>
+      <div v-if="currentMember">
+        <h4>Member</h4>
         <div>
-          <br><label><strong>Nombre:</strong></label> {{ currentExplorer.name}}
-          <br><label><strong>Username:</strong></label> {{ currentExplorer.username}}
-          <br><label><strong>Mission:</strong></label> {{ currentExplorer.mission}}
+          <br><label><strong>Nombre:</strong></label> {{ currentMember.name}}
+          <br><label><strong>Username:</strong></label> {{ currentMember.username}}
+          <br><label><strong>Mission:</strong></label> {{ currentMember.mission}}
         </div>
-        <router-link :to="'/member/' + currentExplorer.id" class="btn btn-info"> Editar</router-link>
+        <router-link :to="'/member/' + currentMember.id" class="btn btn-info"> Editar</router-link>
       </div>
       <div v-else>
         <br />
@@ -42,7 +42,7 @@ export default {
       tutorials: [],
       members: [],
       currentTutorial: null,
-      currentExplorer: null,
+      currentMember: null,
       currentIndex: -1,
       title: "",
       memberId: ""
@@ -58,8 +58,8 @@ export default {
           console.log(e);
         });
     },
-    setActiveExplorer(member, index) {
-      this.currentExplorer= member;
+    setActiveMember(member, index) {
+      this.currentMember= member;
       this.currentIndex = member? index : -1;
     }
   },
