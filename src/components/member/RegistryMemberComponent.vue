@@ -29,13 +29,24 @@
         <input
           type="text"
           class="form-control"
-          id="mission"
+          id="email"
           required
           v-model="member.email"
-          name="mission"
+          name="email"
         />
       </div>
-      <button @click="saveMember" class="btn btn-success">Agregar</button>
+      <div class="form-group">
+        <label for="title">Password</label>
+        <input
+          type="text"
+          class="form-control"
+          id="password"
+          required
+          v-model="member.password"
+          name="password"
+        />
+      </div>
+      <button @click="saveMember">Agregar</button>
     </div>
     <div v-else>
       <h4> Member creado exitosamente. </h4>
@@ -66,7 +77,7 @@ export default {
         name: this.member.name,
         username: this.member.username,
         email: this.member.email,
-        password: this.member.mission,
+        password: this.member.password,
       };
       MemberService.create(data)
         .then(response => {

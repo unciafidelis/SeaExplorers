@@ -21,8 +21,8 @@ const routes = [
     component: () => import('../src/components/organizer/OrganizerComponent.vue')
   },
   {
-    path: '/event',
-    name: 'event',
+    path: '/events',
+    name: 'event-list',
     component: () => import('../src/components/event/EventComponent.vue')
   },
   {
