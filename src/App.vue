@@ -7,7 +7,7 @@
   <v-toolbar-title></v-toolbar-title>
   <v-spacer></v-spacer>
   <v-toolbar-items>
-    <router-link style="text-decoration: none; color: inherit;" to="/event"><v-btn text style="margin-top: 10%;">Eventos</v-btn></router-link>
+    <router-link style="text-decoration: none; color: inherit;" to="/events"><v-btn text style="margin-top: 10%;">Eventos</v-btn></router-link>
     <router-link style="text-decoration: none; color: inherit;" to="/members"><v-btn text style="margin-top: 8%;">Miembros</v-btn></router-link>
     <router-link style="text-decoration: none; color: inherit;" to="/blog"><v-btn text style="margin-top: 12%;">Blog</v-btn></router-link>
     <router-link style="text-decoration: none; color: inherit;" to="/donate"><v-btn text style="background:#006ff9; margin-top: 10%;" class="primary">Donar</v-btn></router-link>

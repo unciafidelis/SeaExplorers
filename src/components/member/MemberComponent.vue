@@ -1,5 +1,5 @@
 <template>
-  <div class="list row">
+  <div class="list row" style= "margin-left: 10%; margin-top: 5%; margin-right: 10%;">
     <div class="col-md-6">
       <h4> Miembros Inscritos </h4>
       <ul class="list-group">
