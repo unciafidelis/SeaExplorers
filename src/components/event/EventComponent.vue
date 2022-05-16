@@ -9,7 +9,7 @@
           :key="index"
           @click="setActiveExplorer(event, index)"
         >
-          {{ event.username }}
+          {{ event.name }}
         </li>
 
       </ul>
@@ -37,7 +37,7 @@
   </div>
 </template>
 <script>
-import EventService from "../../../lib/services/EventService";
+import EventService from "../../../src/services/EventService";
 export default {
   name: "event-list",
   data() {
@@ -52,7 +52,7 @@ export default {
     };
   },
   methods: {
-    getAllExplorers(){
+    getAllEvents(){
       EventService.getAll()
         .then(response => {
           this.events = response.data;
@@ -67,7 +67,7 @@ export default {
     }
   },
   mounted() {
-    this.getAllExplorers();
+    this.getAllEvents();
   }
 };
 </script>

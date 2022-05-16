@@ -16,8 +16,8 @@ const routes = [
     component: () => import('../src/components/member/MemberComponent.vue')
   },
   {
-    path: '/event',
-    name: 'event',
+    path: '/events',
+    name: 'event-list',
     component: () => import('../src/components/event/EventComponent.vue')
   },
   {
