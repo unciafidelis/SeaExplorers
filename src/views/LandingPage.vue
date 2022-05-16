@@ -25,7 +25,17 @@
       </video>
       <p class="text"> Sea Explorers</p>
     </div>
-    
+     <img src="../assets/img/3.png" style="position: relative; width: 100%; height: auto;">
+     <img src="../assets/img/4.png" style="position: relative; width: 100%; height: auto;">
+     <img src="../assets/img/5.png" style="position: relative; width: 100%; height: auto;">
+     <img src="../assets/img/6.png" style="position: relative; width: 100%; height: auto;">
+     <img src="../assets/img/7.png" style="position: relative; width: 100%; height: auto;">
+     <img src="../assets/img/8.png" style="position: relative; width: 100%; height: auto;">
+     <img src="../assets/img/9.png" style="position: relative; width: 100%; height: auto;">
+     <img src="../assets/img/10.png" style="position: relative; width: 100%; height: auto;">
+     <img src="../assets/img/11.png" style="position: relative; width: 100%; height: auto;">
+     <img src="../assets/img/12.png" style="position: relative; width: 100%; height: auto;">
+
 </v-sheet>
   
 </template>
@@ -63,7 +73,7 @@
 
 /* Container should be full height and full width */
 .container {
-  position: fixed;
+  position: relative;
   width: 100vw;
   height: 100vh;
 }
