@@ -25,9 +25,18 @@
       </video>
       <p class="text"> Sea Explorers</p>
     </div>
-     <img src="../assets/img/3.png" style="position: relative; width: 100%; height: auto;">
+     <img src="../assets/img/3.png" style="position: relative; width: 100%; height: auto; top: 0; left: 0;">
+     <img src="https://acortar.link/US8mJm" style="position: absolute; top: 4%; right: 5%; width: 10%; height: auto;">
      <img src="../assets/img/4.png" style="position: relative; width: 100%; height: auto;">
+     <div class="slide-slow">
+      <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg">
+      <div class="inner">
+        <img src="https://acortar.link/TRxzB2" style="width: 10%; height: auto;">
+      </div>
+      </v-parallax>
+     </div>
      <img src="../assets/img/5.png" style="position: relative; width: 100%; height: auto;">
+     
      <img src="../assets/img/6.png" style="position: relative; width: 100%; height: auto;">
      <img src="../assets/img/7.png" style="position: relative; width: 100%; height: auto;">
      <img src="../assets/img/8.png" style="position: relative; width: 100%; height: auto;">
@@ -98,5 +107,18 @@
   mix-blend-mode: multiply;
   user-select: none;
 }
+div.slide-slow { 
+  overflow: hidden; 
+  } 
+  div.slide-slow div.inner { 
+    animation: slide-slow 30s; margin-top: 5%; 
+  } 
+  @keyframes slide-slow { 
+    from { 
+      margin-top: 5%; 
+      } to { 
+        margin-top: 20%; 
+  } }
+
 
 </style>

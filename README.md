@@ -74,3 +74,7 @@ Now, we are working on:
 ## Cambio de privado a público
 
 El cambio de visibilidad de privado a público afecta los fork y branches del proyecto separandolos en proyectos individuales.
+
+## Landing Page
+
+![](SeaExplorers.gif)
